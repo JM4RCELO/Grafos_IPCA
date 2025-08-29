@@ -1,0 +1,1010 @@
+\doxysection{Referência ao ficheiro C\+:/\+Users/joaom/\+Documents/\+IPCA/\+Material\+Curso/2o\+\_\+\+Semestre/\+Estruturas\+\_\+\+Dados\+\_\+\+Avancados/\+TEDA\+\_\+31067\+\_\+\+Grafos/source.c}
+\hypertarget{source_8c}{}\label{source_8c}\index{C:/Users/joaom/Documents/IPCA/MaterialCurso/2o\_Semestre/Estruturas\_Dados\_Avancados/TEDA\_31067\_Grafos/source.c@{C:/Users/joaom/Documents/IPCA/MaterialCurso/2o\_Semestre/Estruturas\_Dados\_Avancados/TEDA\_31067\_Grafos/source.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+\doxysubsubsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structantenas}{antenas}}
+\begin{DoxyCompactList}\small\item\em Definição da estrutura de dados para as antenas. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structadjacentes}{adjacentes}}
+\begin{DoxyCompactList}\small\item\em Definição da estrutura de dados para os adjacentes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{source_8c_a8d23feea868a983c8c2b661e1e16972f}{RED}}~12
+\begin{DoxyCompactList}\small\item\em Trabalho sobre antenas de telecomunicações com grafos. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{source_8c_acfbc006ea433ad708fdee3e82996e721}{GREEN}}~10
+\item 
+\#define \mbox{\hyperlink{source_8c_abf681265909adf3d3e8116c93c0ba179}{YELLOW}}~14
+\item 
+\#define \mbox{\hyperlink{source_8c_a79d10e672abb49ad63eeaa8aaef57c38}{BLUE}}~9
+\item 
+\#define \mbox{\hyperlink{source_8c_a6f699060902f800f12aaae150f3a708e}{MAGENTA}}~13
+\item 
+\#define \mbox{\hyperlink{source_8c_ad243f93c16bc4c1d3e0a13b84421d760}{CYAN}}~11
+\item 
+\#define \mbox{\hyperlink{source_8c_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}}~15
+\item 
+\#define \mbox{\hyperlink{source_8c_ae0b4816fb45161ef9da5e6d6134ee28a}{TAM}}~50
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definições de tipos}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct antenas \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{source_8c_a977cc9c18f1660fb5c76e72f6357971e}{antenas}}
+\begin{DoxyCompactList}\small\item\em Definição da estrutura de dados para as antenas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{source_8c_a822f64e96afd0515fa1612e4ef112ba3}{contarantenas}} (\mbox{\hyperlink{structantenas}{antenas}} lista)
+\begin{DoxyCompactList}\small\item\em Definição da estrutura de dados para o caminho. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{source_8c_abf84312f0a1500cfe85c130464da3ac4}{contaradj}} (\mbox{\hyperlink{structadjacentes}{adjacentes}} lista)
+\item 
+void \mbox{\hyperlink{source_8c_af23ab64dda136e7a391d22c4fcbf4c18}{liberar\+\_\+memoria\+\_\+adjacentes}} (\mbox{\hyperlink{structadjacentes}{adjacentes}} lista)
+\begin{DoxyCompactList}\small\item\em Função para libertar a memória alocada para a lista de antenas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{source_8c_a0eaba51dd30db393e925cf74125e20eb}{libertar\+\_\+memoria\+\_\+antenas}} (\mbox{\hyperlink{structantenas}{antenas}} lista)
+\begin{DoxyCompactList}\small\item\em Função para libertar a memória alocada para a lista de antenas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}} (int cor)
+\begin{DoxyCompactList}\small\item\em Função para definir a cor do texto no terminal. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{source_8c_ac9172d1143439bde571a162196187420}{n\+\_\+colunas}} (char ficheiro\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Função para contar o número de colunas no ficheiro. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{source_8c_a3d1b49ed242259db3ac95528a735c7b2}{n\+\_\+linhas}} (char ficheiro\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Função para contar o número de linhas no ficheiro. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structantenas}{antenas}} \mbox{\hyperlink{source_8c_ae2ae1852d90e69af795f090960276cae}{ler\+\_\+ficheiro}} (char ficheiro\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{structantenas}{antenas}} mapa)
+\begin{DoxyCompactList}\small\item\em Função para ler o ficheiro e armazenar os dados na lista de antenas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{source_8c_a18c8218927ce641705cedebfaca181e4}{impressao\+\_\+mapa\+\_\+das\+\_\+antenas}} (\mbox{\hyperlink{structantenas}{antenas}} mapa)
+\begin{DoxyCompactList}\small\item\em Função para imprimir o mapa das antenas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{source_8c_a6b0352687dbedd2712945509a726fc38}{recursiva\+\_\+profundidade}} (\mbox{\hyperlink{structantenas}{antenas}} mapa, int vertice, int visitados\mbox{[}$\,$\mbox{]}, int caminho\mbox{[}$\,$\mbox{]}, int nivel)
+\begin{DoxyCompactList}\small\item\em Função recursiva para procurar em profundidade. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{source_8c_a3955e47d7c902d0e018eecc63675910d}{procura\+Profundidade}} (\mbox{\hyperlink{structantenas}{antenas}} mapa, int partida)
+\begin{DoxyCompactList}\small\item\em Função para procurar em profundidade. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{source_8c_afe2e0dc3ccd28ac7489a54bbc8db2206}{procura\+Largura}} (\mbox{\hyperlink{structantenas}{antenas}} mapa, int vertice)
+\begin{DoxyCompactList}\small\item\em Função para procurar em profundidade. através dos grafos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{source_8c_a75b49b961c1106519a649c5c6959b651}{intersecao}} (\mbox{\hyperlink{structantenas}{antenas}} mapa, int tamanho)
+\begin{DoxyCompactList}\small\item\em Função para determinar se dois pares de antenas com frequências de ressonância distintas A e B se intersetam. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structantenas}{antenas}} \mbox{\hyperlink{source_8c_ad1fc2915b1249a8662e621a43cb62016}{adicionar\+Adjacentes}} (\mbox{\hyperlink{structantenas}{antenas}} mapa)
+\begin{DoxyCompactList}\small\item\em Função para adicionar adjacentes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{source_8c_a32933396b1d9275bbab356b91fdaf381}{imprimir\+Adjacentes}} (\mbox{\hyperlink{structantenas}{antenas}} mapa)
+\begin{DoxyCompactList}\small\item\em Função para imprimir os adjacentes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{source_8c_a2d52929d60841cd1296a081699671bf0}{sistema}} ()
+\begin{DoxyCompactList}\small\item\em Função principal do sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentação das macros}
+\Hypertarget{source_8c_a79d10e672abb49ad63eeaa8aaef57c38}\index{source.c@{source.c}!BLUE@{BLUE}}
+\index{BLUE@{BLUE}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{BLUE}{BLUE}}
+{\footnotesize\ttfamily \label{source_8c_a79d10e672abb49ad63eeaa8aaef57c38} 
+\#define BLUE~9}
+
+\Hypertarget{source_8c_ad243f93c16bc4c1d3e0a13b84421d760}\index{source.c@{source.c}!CYAN@{CYAN}}
+\index{CYAN@{CYAN}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{CYAN}{CYAN}}
+{\footnotesize\ttfamily \label{source_8c_ad243f93c16bc4c1d3e0a13b84421d760} 
+\#define CYAN~11}
+
+\Hypertarget{source_8c_acfbc006ea433ad708fdee3e82996e721}\index{source.c@{source.c}!GREEN@{GREEN}}
+\index{GREEN@{GREEN}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{GREEN}{GREEN}}
+{\footnotesize\ttfamily \label{source_8c_acfbc006ea433ad708fdee3e82996e721} 
+\#define GREEN~10}
+
+\Hypertarget{source_8c_a6f699060902f800f12aaae150f3a708e}\index{source.c@{source.c}!MAGENTA@{MAGENTA}}
+\index{MAGENTA@{MAGENTA}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{MAGENTA}{MAGENTA}}
+{\footnotesize\ttfamily \label{source_8c_a6f699060902f800f12aaae150f3a708e} 
+\#define MAGENTA~13}
+
+\Hypertarget{source_8c_a8d23feea868a983c8c2b661e1e16972f}\index{source.c@{source.c}!RED@{RED}}
+\index{RED@{RED}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{RED}{RED}}
+{\footnotesize\ttfamily \label{source_8c_a8d23feea868a983c8c2b661e1e16972f} 
+\#define RED~12}
+
+
+
+Trabalho sobre antenas de telecomunicações com grafos. 
+
+\begin{DoxyAuthor}{Autor}
+João Marques -\/ 31067 EIM-\/\+IPCA 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+2023-\/10-\/03
+\end{DoxyDate}
+Este trabalho consiste na leitura de um ficheiro com dados sobre antenas de telecomunicações e a sua representação em memória através de listas ligadas. O programa permite a leitura do ficheiro, a impressão do mapa das antenas, a procura em profundidade e largura e a interseção de antenas. \begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000001}{Bug}}]nas interseções não é validado se a interseção acontece apenas no segmento de reta entre as antenas ou se se interseccionam fora do segmento de reta. No entanto é validado se essa interseção acontece dentro do mapa. 
+
+a função de traçar caminhos ainda não está implementada. @ \end{DoxyRefDesc}
+
+
+Definição do código da cor para o terminal. \Hypertarget{source_8c_ae0b4816fb45161ef9da5e6d6134ee28a}\index{source.c@{source.c}!TAM@{TAM}}
+\index{TAM@{TAM}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{TAM}{TAM}}
+{\footnotesize\ttfamily \label{source_8c_ae0b4816fb45161ef9da5e6d6134ee28a} 
+\#define TAM~50}
+
+\Hypertarget{source_8c_a87b537f5fa5c109d3c05c13d6b18f382}\index{source.c@{source.c}!WHITE@{WHITE}}
+\index{WHITE@{WHITE}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{WHITE}{WHITE}}
+{\footnotesize\ttfamily \label{source_8c_a87b537f5fa5c109d3c05c13d6b18f382} 
+\#define WHITE~15}
+
+\Hypertarget{source_8c_abf681265909adf3d3e8116c93c0ba179}\index{source.c@{source.c}!YELLOW@{YELLOW}}
+\index{YELLOW@{YELLOW}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{YELLOW}{YELLOW}}
+{\footnotesize\ttfamily \label{source_8c_abf681265909adf3d3e8116c93c0ba179} 
+\#define YELLOW~14}
+
+
+
+\doxysubsection{Documentação dos tipos}
+\Hypertarget{source_8c_a977cc9c18f1660fb5c76e72f6357971e}\index{source.c@{source.c}!antenas@{antenas}}
+\index{antenas@{antenas}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{antenas}{antenas}}
+{\footnotesize\ttfamily \label{source_8c_a977cc9c18f1660fb5c76e72f6357971e} 
+typedef struct antenas \texorpdfstring{$\ast$}{*} antenas}
+
+
+
+Definição da estrutura de dados para as antenas. 
+
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{source_8c_ad1fc2915b1249a8662e621a43cb62016}\index{source.c@{source.c}!adicionarAdjacentes@{adicionarAdjacentes}}
+\index{adicionarAdjacentes@{adicionarAdjacentes}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{adicionarAdjacentes()}{adicionarAdjacentes()}}
+{\footnotesize\ttfamily \label{source_8c_ad1fc2915b1249a8662e621a43cb62016} 
+\mbox{\hyperlink{structantenas}{antenas}} adicionar\+Adjacentes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structantenas}{antenas}}}]{mapa}{}\end{DoxyParamCaption})}
+
+
+
+Função para adicionar adjacentes. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em mapa} & Ponteiro para a lista de antenas. \\
+\hline
+{\em novo} & Ponteiro para a lista de adjacentes. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00507\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00508\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{structantenas}{antenas}}\ a\ =\ mapa;\ a\ !=\ NULL;\ a\ =\ a-\/>\mbox{\hyperlink{structantenas_a2885be1d1224df60f8b3b6c540737718}{seguinte}})\ \{}
+\DoxyCodeLine{00509\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{structantenas}{antenas}}\ b\ =\ mapa;\ b\ !=\ NULL;\ b\ =\ b-\/>\mbox{\hyperlink{structantenas_a2885be1d1224df60f8b3b6c540737718}{seguinte}})\ \{}
+\DoxyCodeLine{00510\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (a-\/>freq\ ==\ b-\/>freq\ \&\&\ a-\/>verticeantena\ !=\ b-\/>verticeantena)\ \{}
+\DoxyCodeLine{00511\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structadjacentes}{adjacentes}}\ novo\ =\ (\mbox{\hyperlink{structadjacentes}{adjacentes}})malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structadjacentes}{adjacentes}}));}
+\DoxyCodeLine{00512\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!novo)\ \{}
+\DoxyCodeLine{00513\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}});}
+\DoxyCodeLine{00514\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Erro\ ao\ alocar\ memória\ para\ adjacente.\(\backslash\)n"{}});}
+\DoxyCodeLine{00515\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});}
+\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00517\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00518\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ novo-\/>\mbox{\hyperlink{structadjacentes_a4f4f45dc947ce3e1033c8e96fbebe82e}{verticeadjacente}}\ =\ b-\/>verticeantena;}
+\DoxyCodeLine{00519\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ novo-\/>\mbox{\hyperlink{structadjacentes_a04a5719249e62ff934f6ea0b8ba0814d}{seguinte}}\ =\ NULL;}
+\DoxyCodeLine{00520\ }
+\DoxyCodeLine{00521\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Inserir\ no\ fim\ da\ lista\ de\ adjacentes\ de\ 'a'}}
+\DoxyCodeLine{00522\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (a-\/>listaadjacentes\ ==\ NULL)\ \{}
+\DoxyCodeLine{00523\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ a-\/>listaadjacentes\ =\ novo;}
+\DoxyCodeLine{00524\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00525\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structadjacentes}{adjacentes}}\ temp\ =\ a-\/>listaadjacentes;}
+\DoxyCodeLine{00526\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (temp-\/>\mbox{\hyperlink{structadjacentes_a04a5719249e62ff934f6ea0b8ba0814d}{seguinte}}\ !=\ NULL)\ \{}
+\DoxyCodeLine{00527\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ temp\ =\ temp-\/>\mbox{\hyperlink{structadjacentes_a04a5719249e62ff934f6ea0b8ba0814d}{seguinte}};}
+\DoxyCodeLine{00528\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00529\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ temp-\/>\mbox{\hyperlink{structadjacentes_a04a5719249e62ff934f6ea0b8ba0814d}{seguinte}}\ =\ novo;}
+\DoxyCodeLine{00530\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00531\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00532\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00533\ \ \ \ \ \}}
+\DoxyCodeLine{00534\ }
+\DoxyCodeLine{00535\ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_acfbc006ea433ad708fdee3e82996e721}{GREEN}});}
+\DoxyCodeLine{00536\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Adjacentes\ adicionados\ com\ sucesso!\(\backslash\)n"{}});}
+\DoxyCodeLine{00537\ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});}
+\DoxyCodeLine{00538\ \ \ \ \ \textcolor{keywordflow}{return}\ mapa;}
+\DoxyCodeLine{00539\ \}}
+
+\end{DoxyCode}
+\Hypertarget{source_8c_abf84312f0a1500cfe85c130464da3ac4}\index{source.c@{source.c}!contaradj@{contaradj}}
+\index{contaradj@{contaradj}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{contaradj()}{contaradj()}}
+{\footnotesize\ttfamily \label{source_8c_abf84312f0a1500cfe85c130464da3ac4} 
+int contaradj (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structadjacentes}{adjacentes}}}]{lista}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00088\ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{int}\ contador\ =\ 0;}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordflow}{while}\ (lista\ !=\ NULL)\ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ contador++;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ lista\ =\ lista-\/>\mbox{\hyperlink{structadjacentes_a04a5719249e62ff934f6ea0b8ba0814d}{seguinte}};}
+\DoxyCodeLine{00094\ \ \ \ \ \}}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordflow}{return}\ contador;}
+\DoxyCodeLine{00096\ \}}
+
+\end{DoxyCode}
+\Hypertarget{source_8c_a822f64e96afd0515fa1612e4ef112ba3}\index{source.c@{source.c}!contarantenas@{contarantenas}}
+\index{contarantenas@{contarantenas}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{contarantenas()}{contarantenas()}}
+{\footnotesize\ttfamily \label{source_8c_a822f64e96afd0515fa1612e4ef112ba3} 
+int contarantenas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structantenas}{antenas}}}]{lista}{}\end{DoxyParamCaption})}
+
+
+
+Definição da estrutura de dados para o caminho. 
+
+Esta estrutura contém um ponteiro para o próximo adjacente e o número do vértice adjacente.
+
+Função para contar o número de antenas válidas na lista. 
+\begin{DoxyParams}{Parâmetros}
+{\em contador,variável} & para contar o número de antenas. \\
+\hline
+{\em lista,ponteiro} & para a lista de antenas.\\
+\hline
+\end{DoxyParams}
+Esta função percorre a lista de antenas e conta o número de antenas. \begin{DoxyReturn}{Retorna}
+int 
+\end{DoxyReturn}
+Verifica se a antena é válida
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00075\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{int}\ contador\ =\ 0;}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordflow}{while}\ (lista\ !=\ NULL)\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(lista-\/>\mbox{\hyperlink{structantenas_a0b5330bae99713f9c1bde6de095cd44c}{freq}}\ !=\ \textcolor{charliteral}{'.'})\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ contador++;}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ lista\ =\ lista-\/>\mbox{\hyperlink{structantenas_a2885be1d1224df60f8b3b6c540737718}{seguinte}};}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordflow}{return}\ contador;}
+\DoxyCodeLine{00085\ \}}
+
+\end{DoxyCode}
+\Hypertarget{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}\index{source.c@{source.c}!corletra@{corletra}}
+\index{corletra@{corletra}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{corletra()}{corletra()}}
+{\footnotesize\ttfamily \label{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9} 
+void corletra (\begin{DoxyParamCaption}\item[{int}]{cor}{}\end{DoxyParamCaption})}
+
+
+
+Função para definir a cor do texto no terminal. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cor} & Cor a ser definida. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00132\ \{}
+\DoxyCodeLine{00133\ \ \ \ \ HANDLE\ hConsole;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//ponteiro\ para\ um\ recurso\ do\ sistema\ operativo,\ neste\ caso,\ a\ consola}}
+\DoxyCodeLine{00134\ \ \ \ \ hConsole\ =\ GetStdHandle(STD\_OUTPUT\_HANDLE);\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00135\ \ \ \ \ SetConsoleTextAttribute(hConsole,\ cor);}
+\DoxyCodeLine{00136\ \}}
+
+\end{DoxyCode}
+\Hypertarget{source_8c_a18c8218927ce641705cedebfaca181e4}\index{source.c@{source.c}!impressao\_mapa\_das\_antenas@{impressao\_mapa\_das\_antenas}}
+\index{impressao\_mapa\_das\_antenas@{impressao\_mapa\_das\_antenas}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{impressao\_mapa\_das\_antenas()}{impressao\_mapa\_das\_antenas()}}
+{\footnotesize\ttfamily \label{source_8c_a18c8218927ce641705cedebfaca181e4} 
+void impressao\+\_\+mapa\+\_\+das\+\_\+antenas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structantenas}{antenas}}}]{mapa}{}\end{DoxyParamCaption})}
+
+
+
+Função para imprimir o mapa das antenas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ficheiro} & Nome do ficheiro. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00274\ \{}
+\DoxyCodeLine{00275\ \ \ \ \ \textcolor{keywordtype}{int}\ tamanho;}
+\DoxyCodeLine{00276\ \ \ \ \ \textcolor{keywordtype}{int}\ linha,\ coluna;}
+\DoxyCodeLine{00277\ \ \ \ \ \mbox{\hyperlink{structantenas}{antenas}}\ auxiliar\ =\ mapa;}
+\DoxyCodeLine{00278\ \ \ \ \ \textcolor{keywordflow}{if}\ (!auxiliar)}
+\DoxyCodeLine{00279\ \ \ \ \ \{}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}});}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Não\ há\ dados.\ Leia\ o\ mapa\ primeiro!\(\backslash\)n"{}});}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00284\ \ \ \ \ \}}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00286\ \ \ \ \ \textcolor{keywordflow}{while}\ (auxiliar!=\ NULL)}
+\DoxyCodeLine{00287\ \ \ \ \ \{}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ tamanho=\ auxiliar-\/>\mbox{\hyperlink{structantenas_af57080d098efc718dd0c6ad1d14de6a9}{coordenadas}};}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ auxiliar\ =\ auxiliar-\/>\mbox{\hyperlink{structantenas_a2885be1d1224df60f8b3b6c540737718}{seguinte}};}
+\DoxyCodeLine{00290\ \ \ \ \ \}}
+\DoxyCodeLine{00291\ \ \ \ \ auxiliar\ =\ mapa;}
+\DoxyCodeLine{00292\ \ \ \ \ linha\ =\ tamanho\ /\ 1000;}
+\DoxyCodeLine{00293\ \ \ \ \ coluna\ =\ tamanho\ \%\ 1000;}
+\DoxyCodeLine{00294\ \ \ \ \ }
+\DoxyCodeLine{00295\ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_acfbc006ea433ad708fdee3e82996e721}{GREEN}});}
+\DoxyCodeLine{00296\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n***************************\(\backslash\)n"{}});}
+\DoxyCodeLine{00297\ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});}
+\DoxyCodeLine{00298\ \ \ \ \ \textcolor{keywordflow}{while}\ (auxiliar\ !=\ NULL)}
+\DoxyCodeLine{00299\ \ \ \ \ \{}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (auxiliar-\/>\mbox{\hyperlink{structantenas_a0b5330bae99713f9c1bde6de095cd44c}{freq}}\ !=\ \textcolor{charliteral}{'.'})}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Antena:\ \%c\ ,\ n\ \%d\ com\ coordenada\ (\%d,\ \%d)\(\backslash\)n"{}},\ auxiliar-\/>\mbox{\hyperlink{structantenas_a0b5330bae99713f9c1bde6de095cd44c}{freq}},\ auxiliar-\/>\mbox{\hyperlink{structantenas_a29481a7413ce6a78ab30caf74caf3eb9}{verticeantena}},\ auxiliar-\/>\mbox{\hyperlink{structantenas_af57080d098efc718dd0c6ad1d14de6a9}{coordenadas}}\ /\ 1000,\ auxiliar-\/>\mbox{\hyperlink{structantenas_af57080d098efc718dd0c6ad1d14de6a9}{coordenadas}}\ \%\ 1000);}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ auxiliar\ =\ auxiliar-\/>\mbox{\hyperlink{structantenas_a2885be1d1224df60f8b3b6c540737718}{seguinte}};}
+\DoxyCodeLine{00305\ \ \ \ \ \}}
+\DoxyCodeLine{00306\ \ \ \ \ auxiliar\ =\ mapa;}
+\DoxyCodeLine{00307\ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_acfbc006ea433ad708fdee3e82996e721}{GREEN}});}
+\DoxyCodeLine{00308\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n***************************\(\backslash\)n"{}});}
+\DoxyCodeLine{00309\ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});}
+\DoxyCodeLine{00310\ }
+\DoxyCodeLine{00311\ \}}
+
+\end{DoxyCode}
+\Hypertarget{source_8c_a32933396b1d9275bbab356b91fdaf381}\index{source.c@{source.c}!imprimirAdjacentes@{imprimirAdjacentes}}
+\index{imprimirAdjacentes@{imprimirAdjacentes}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{imprimirAdjacentes()}{imprimirAdjacentes()}}
+{\footnotesize\ttfamily \label{source_8c_a32933396b1d9275bbab356b91fdaf381} 
+void imprimir\+Adjacentes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structantenas}{antenas}}}]{mapa}{}\end{DoxyParamCaption})}
+
+
+
+Função para imprimir os adjacentes. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em mapa} & Ponteiro para a lista de antenas. \\
+\hline
+{\em lista} & Ponteiro para a lista de adjacentes. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00546\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00547\ \ \ \ \ \mbox{\hyperlink{structantenas}{antenas}}\ auxiliar\ =\ mapa;}
+\DoxyCodeLine{00548\ \ \ \ \ }
+\DoxyCodeLine{00549\ \ \ \ \ \textcolor{keywordflow}{while}\ (auxiliar\ !=\ NULL)\{}
+\DoxyCodeLine{00550\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Antena:\ \%c,\ n\ \%d\ com\ coordenada\ (\%d,\ \%d)\ tem\ como\ adjacentes:\ ["{}},\ auxiliar-\/>\mbox{\hyperlink{structantenas_a0b5330bae99713f9c1bde6de095cd44c}{freq}},\ auxiliar-\/>\mbox{\hyperlink{structantenas_a29481a7413ce6a78ab30caf74caf3eb9}{verticeantena}},\ auxiliar-\/>\mbox{\hyperlink{structantenas_af57080d098efc718dd0c6ad1d14de6a9}{coordenadas}}\ /\ 1000,\ auxiliar-\/>\mbox{\hyperlink{structantenas_af57080d098efc718dd0c6ad1d14de6a9}{coordenadas}}\ \%\ 1000);}
+\DoxyCodeLine{00551\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structadjacentes}{adjacentes}}\ listadjacente\ =\ auxiliar-\/>\mbox{\hyperlink{structantenas_ae0316f4aa9104d3dd079d2b4053688aa}{listaadjacentes}};}
+\DoxyCodeLine{00552\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (listadjacente\ !=\ NULL)\ \{}
+\DoxyCodeLine{00553\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\ "{}},\ listadjacente-\/>\mbox{\hyperlink{structadjacentes_a4f4f45dc947ce3e1033c8e96fbebe82e}{verticeadjacente}});}
+\DoxyCodeLine{00554\ \ \ \ \ \ \ \ \ \ \ \ \ listadjacente\ =\ listadjacente-\/>\mbox{\hyperlink{structadjacentes_a04a5719249e62ff934f6ea0b8ba0814d}{seguinte}};}
+\DoxyCodeLine{00555\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00556\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}]\(\backslash\)n"{}});}
+\DoxyCodeLine{00557\ \ \ \ \ \ \ \ \ auxiliar\ =\ auxiliar-\/>\mbox{\hyperlink{structantenas_a2885be1d1224df60f8b3b6c540737718}{seguinte}};}
+\DoxyCodeLine{00558\ \ \ \ \ \}\ }
+\DoxyCodeLine{00559\ \ \ \ \ }
+\DoxyCodeLine{00560\ \}}
+
+\end{DoxyCode}
+\Hypertarget{source_8c_a75b49b961c1106519a649c5c6959b651}\index{source.c@{source.c}!intersecao@{intersecao}}
+\index{intersecao@{intersecao}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{intersecao()}{intersecao()}}
+{\footnotesize\ttfamily \label{source_8c_a75b49b961c1106519a649c5c6959b651} 
+void intersecao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structantenas}{antenas}}}]{mapa}{, }\item[{int}]{tamanho}{}\end{DoxyParamCaption})}
+
+
+
+Função para determinar se dois pares de antenas com frequências de ressonância distintas A e B se intersetam. 
+
+A função percorre a lista de antenas e verifica se as antenas A e B têm frequências diferentes e se não são a mesma antena. Depois, calcula o declive e o ponto de interseção entre as duas antenas. Se o ponto de interseção estiver dentro dos limites das antenas A e B, imprime a coordenada de interseção. Caso sejam paralelas é imprimo uma mensagem com essa informação. \begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000002}{Bug}}]Problemas com verificações de dados e iterações. Ajustes na lógica necessários. \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Parâmetros}
+{\em mapa} & \\
+\hline
+\end{DoxyParams}
+Ignorar se são frequências diferentes ou se for a mesma antena
+
+Garantir que são antenas distintas
+
+declive em numerico (4/2 = 2)
+
+calculo do b da função (b = y -\/ mx) =\texorpdfstring{$>$}{>} b = 2 -\/ 3\texorpdfstring{$\ast$}{*}3 = -\/7
+
+calculo do x da coordenada de interseção usando a fórmula x=(b2-\/b1)/(m1-\/m2)
+
+calculo do y da coordenada de interseção usando a fórmula y=mx+b
+
+calculo da coordenada de interseção
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00458\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00459\ \ \ \ \ }
+\DoxyCodeLine{00460\ \ \ \ \ \textcolor{keywordtype}{int}\ n\_antenas\ =\ \mbox{\hyperlink{source_8c_a822f64e96afd0515fa1612e4ef112ba3}{contarantenas}}(mapa);}
+\DoxyCodeLine{00461\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{structantenas}{antenas}}\ a\ =\ mapa;\ a\ !=\ NULL;\ a\ =\ a-\/>\mbox{\hyperlink{structantenas_a2885be1d1224df60f8b3b6c540737718}{seguinte}})\ \{}
+\DoxyCodeLine{00462\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{structantenas}{antenas}}\ b\ =\ mapa;\ b\ !=\ NULL\ \&\&\ b\ !=\ a;\ b\ =\ b-\/>\mbox{\hyperlink{structantenas_a2885be1d1224df60f8b3b6c540737718}{seguinte}})\ \{}
+\DoxyCodeLine{00463\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (a-\/>freq\ !=\ b-\/>freq\ ||\ a-\/>verticeantena\ ==\ b-\/>verticeantena)\ \textcolor{keywordflow}{continue};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00464\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{structantenas}{antenas}}\ c\ =\ a-\/>\mbox{\hyperlink{structantenas_a2885be1d1224df60f8b3b6c540737718}{seguinte}};\ c\ !=\ NULL\ \&\&\ c\ !=\ b;\ c\ =\ c-\/>\mbox{\hyperlink{structantenas_a2885be1d1224df60f8b3b6c540737718}{seguinte}})\ \{}
+\DoxyCodeLine{00465\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{structantenas}{antenas}}\ d\ =\ b-\/>\mbox{\hyperlink{structantenas_a2885be1d1224df60f8b3b6c540737718}{seguinte}};\ d\ !=\ NULL\ \&\&\ d\ !=\ a\ \&\&\ d\ !=\ c;\ d\ =\ d-\/>\mbox{\hyperlink{structantenas_a2885be1d1224df60f8b3b6c540737718}{seguinte}})\ \{}
+\DoxyCodeLine{00466\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (c-\/>freq\ !=\ d-\/>freq\ ||\ c-\/>verticeantena\ ==\ d-\/>verticeantena)\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00467\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (a-\/>freq\ !=\ c-\/>freq\ \&\&}
+\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ a-\/>verticeantena\ !=\ c-\/>verticeantena\ \&\&\ a-\/>verticeantena\ !=\ d-\/>verticeantena\ \&\&}
+\DoxyCodeLine{00469\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b-\/>verticeantena\ !=\ c-\/>verticeantena\ \&\&\ b-\/>verticeantena\ !=\ d-\/>verticeantena)\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00470\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ declivefuncao1\ =\ (float)(b-\/>coordenadas\%1000\ -\/\ a-\/>coordenadas\%1000)\ /\ (b-\/>coordenadas/1000\ -\/\ a-\/>coordenadas/1000);\ }
+\DoxyCodeLine{00471\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ bfuncao1\ =\ (float)(a-\/>coordenadas\ \%\ 1000)\ -\/\ declivefuncao1\ *\ (a-\/>coordenadas\ /\ 1000);\ \ }
+\DoxyCodeLine{00472\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//bfuncao1\ =\ 2x\ +\ -\/7}}
+\DoxyCodeLine{00473\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ declivefuncao2\ =\ (float)(d-\/>coordenadas\%1000\ -\/\ c-\/>coordenadas\%1000)\ /\ (d-\/>coordenadas/1000\ -\/\ c-\/>coordenadas/1000);\ \textcolor{comment}{//\ declive\ em\ numerico\ (8/2\ =\ 4)}}
+\DoxyCodeLine{00474\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ bfuncao2\ =\ (float)(c-\/>coordenadas\%1000)\ -\/\ declivefuncao2*(c-\/>coordenadas\%1000);\ \ \textcolor{comment}{//calculo\ do\ b\ da\ função\ (b\ =\ y\ -\/\ mx)\ =>\ b\ =\ 1\ -\/\ 4*6\ =\ -\/23}}
+\DoxyCodeLine{00475\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Atenção,\ que\ uma\ linha\ está\ guardada\ como\ x,\ num\ plano\ cartesiano\ seria\ y\ e\ vice\ versa}}
+\DoxyCodeLine{00476\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//basicamente\ já\ tenho:}}
+\DoxyCodeLine{00477\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//y1=m1x\ +\ b1,\ segundo\ o\ exemplo:\ y1=\ 2x\ +\ -\/7}}
+\DoxyCodeLine{00478\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//y2=m2x\ +\ b2,\ segundo\ o\ exemplo:\ y2=\ 4x\ +\ -\/23}}
+\DoxyCodeLine{00479\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ agora\ é\ igualar\ as\ duas\ funções,\ que\ dará\ x=(b2-\/b1)/(m1-\/m2)\ =>\ }}
+\DoxyCodeLine{00480\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//x=\ (-\/23-\/(-\/7))/(2-\/4)\ =>\ x=\ -\/16/-\/2\ =>\ x=8}}
+\DoxyCodeLine{00481\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00482\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ para\ descobrir\ o\ ponto\ de\ interseção,\ igualamos\ as\ duas\ funções:}}
+\DoxyCodeLine{00483\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ xintercessao\ =\ (bfuncao2\ -\/\ bfuncao1)\ /\ (declivefuncao1\ -\/\ declivefuncao2);\ }
+\DoxyCodeLine{00484\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ yintercessao\ =\ declivefuncao1\ *\ xintercessao\ +\ bfuncao1;\ }
+\DoxyCodeLine{00485\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ coordenadasintercessao\ =\ (xintercessao\ *\ 1000)\ +\ yintercessao;\ }
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (coordenadasintercessao\ ==\ 0)\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00487\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (coordenadasintercessao\ >\ 0\ \&\&\ coordenadasintercessao\ <\ tamanho)\ \{}
+\DoxyCodeLine{00488\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_acfbc006ea433ad708fdee3e82996e721}{GREEN}});}
+\DoxyCodeLine{00489\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}As\ antenas\ \%c(\%d,\%d)\ \ \%c(\%d,\%d)\ e\ \%c(\%d,\%d)\ \%c(\%d,\%d)\ interceptam-\/se\ na\ coordenada\ (\%.2f,\ \%.2f)\(\backslash\)n"{}},\ a-\/>freq,\ a-\/>coordenadas/1000,\ a-\/>coordenadas\%1000,\ b-\/>freq,\ b-\/>coordenadas/1000,\ b-\/>coordenadas\%1000,\ }
+\DoxyCodeLine{00490\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ c-\/>freq,\ c-\/>coordenadas/1000,\ c-\/>coordenadas\%1000,\ d-\/>freq,\ d-\/>coordenadas/1000,\ d-\/>coordenadas\%1000,\ xintercessao,\ yintercessao);}
+\DoxyCodeLine{00491\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});}
+\DoxyCodeLine{00492\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00493\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00494\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00495\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00496\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00497\ \ \ \ \ \}}
+\DoxyCodeLine{00498\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00499\ \}\ \ \ \ }
+
+\end{DoxyCode}
+\Hypertarget{source_8c_ae2ae1852d90e69af795f090960276cae}\index{source.c@{source.c}!ler\_ficheiro@{ler\_ficheiro}}
+\index{ler\_ficheiro@{ler\_ficheiro}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{ler\_ficheiro()}{ler\_ficheiro()}}
+{\footnotesize\ttfamily \label{source_8c_ae2ae1852d90e69af795f090960276cae} 
+\mbox{\hyperlink{structantenas}{antenas}} ler\+\_\+ficheiro (\begin{DoxyParamCaption}\item[{char}]{ficheiro}{\mbox{[}$\,$\mbox{]}, }\item[{\mbox{\hyperlink{structantenas}{antenas}}}]{mapa}{}\end{DoxyParamCaption})}
+
+
+
+Função para ler o ficheiro e armazenar os dados na lista de antenas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cidade} & Ponteiro para o ficheiro. \\
+\hline
+{\em mapa} & Ponteiro para a lista de antenas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Ponteiro para a lista de antenas. 
+\end{DoxyReturn}
+Inicializa a lista de adjacentes como vazia
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00195\ \{}
+\DoxyCodeLine{00196\ \ \ \ \ FILE\ *cidade\ =\ fopen(ficheiro,\ \textcolor{stringliteral}{"{}rb"{}});}
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordflow}{if}\ (!cidade)}
+\DoxyCodeLine{00198\ \ \ \ \ \{}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}});}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Erro\ ao\ abrir\ o\ ficheiro.\(\backslash\)n"{}});}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00203\ \ \ \ \ \}}
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{keywordtype}{int}\ contador\ =\ 1;}
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordtype}{int}\ linha\ =\ \mbox{\hyperlink{source_8c_a3d1b49ed242259db3ac95528a735c7b2}{n\_linhas}}(ficheiro);}
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{keywordtype}{int}\ coluna\ =\ \mbox{\hyperlink{source_8c_ac9172d1143439bde571a162196187420}{n\_colunas}}(ficheiro);}
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keywordtype}{char}\ matriz[linha][coluna];}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ linha;\ i++)}
+\DoxyCodeLine{00210\ \ \ \ \ \{}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ coluna;\ j++)}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ fscanf(cidade,\ \textcolor{stringliteral}{"{}\ \%c"{}},\ \&matriz[i][j]);}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00215\ \ \ \ \ \}}
+\DoxyCodeLine{00216\ \ \ \ \ fclose(cidade);}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ linha;\ i++)}
+\DoxyCodeLine{00219\ \ \ \ \ \{}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ coluna;\ j++)}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structantenas}{antenas}}\ novo\ =\ (\mbox{\hyperlink{structantenas}{antenas}})malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structantenas}{antenas}}));}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!novo)}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}});}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Erro\ ao\ alocar\ memória.\(\backslash\)n"{}});}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mapa;}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ novo-\/>\mbox{\hyperlink{structantenas_a0b5330bae99713f9c1bde6de095cd44c}{freq}}\ =\ matriz[i][j];}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ novo-\/>\mbox{\hyperlink{structantenas_af57080d098efc718dd0c6ad1d14de6a9}{coordenadas}}\ =\ ((i\ +\ 1)\ *\ 1000)\ +\ (j\ +\ 1);}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ novo-\/>\mbox{\hyperlink{structantenas_a2885be1d1224df60f8b3b6c540737718}{seguinte}}\ =\ NULL;}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ novo-\/>\mbox{\hyperlink{structantenas_ae0316f4aa9104d3dd079d2b4053688aa}{listaadjacentes}}\ =\ NULL;\ }
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (novo-\/>\mbox{\hyperlink{structantenas_a0b5330bae99713f9c1bde6de095cd44c}{freq}}\ !=\ \textcolor{charliteral}{'.'})}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ novo-\/>\mbox{\hyperlink{structantenas_a29481a7413ce6a78ab30caf74caf3eb9}{verticeantena}}\ =\ contador;\ \textcolor{comment}{//\ Atribui\ o\ número\ do\ registo}}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ contador++;}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ free(novo);\ \textcolor{comment}{//\ Libera\ a\ memória\ se\ a\ frequência\ for\ '.'}}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};\ \textcolor{comment}{//\ Ignora\ antenas\ com\ frequência\ '.'}}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mapa\ ==\ NULL)}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mapa\ =\ novo;}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structantenas}{antenas}}\ aux\ =\ mapa;}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (aux-\/>\mbox{\hyperlink{structantenas_a2885be1d1224df60f8b3b6c540737718}{seguinte}}\ !=\ NULL)}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ aux\ =\ aux-\/>\mbox{\hyperlink{structantenas_a2885be1d1224df60f8b3b6c540737718}{seguinte}};}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ aux-\/>\mbox{\hyperlink{structantenas_a2885be1d1224df60f8b3b6c540737718}{seguinte}}\ =\ novo;}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \ \ }
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00261\ \ \ \ \ \}}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00263\ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_acfbc006ea433ad708fdee3e82996e721}{GREEN}});}
+\DoxyCodeLine{00264\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Dados\ lidos\ com\ sucesso!\(\backslash\)n"{}});}
+\DoxyCodeLine{00265\ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});}
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{keywordflow}{return}\ mapa;}
+\DoxyCodeLine{00267\ \}}
+
+\end{DoxyCode}
+\Hypertarget{source_8c_af23ab64dda136e7a391d22c4fcbf4c18}\index{source.c@{source.c}!liberar\_memoria\_adjacentes@{liberar\_memoria\_adjacentes}}
+\index{liberar\_memoria\_adjacentes@{liberar\_memoria\_adjacentes}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{liberar\_memoria\_adjacentes()}{liberar\_memoria\_adjacentes()}}
+{\footnotesize\ttfamily \label{source_8c_af23ab64dda136e7a391d22c4fcbf4c18} 
+void liberar\+\_\+memoria\+\_\+adjacentes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structadjacentes}{adjacentes}}}]{lista}{}\end{DoxyParamCaption})}
+
+
+
+Função para libertar a memória alocada para a lista de antenas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em lista} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00104\ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordflow}{while}\ (lista\ !=\ NULL)\ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structadjacentes}{adjacentes}}\ temp\ =\ lista;}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ lista\ =\ lista-\/>\mbox{\hyperlink{structadjacentes_a04a5719249e62ff934f6ea0b8ba0814d}{seguinte}};}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ free(temp);}
+\DoxyCodeLine{00109\ \ \ \ \ \}}
+\DoxyCodeLine{00110\ \}}
+
+\end{DoxyCode}
+\Hypertarget{source_8c_a0eaba51dd30db393e925cf74125e20eb}\index{source.c@{source.c}!libertar\_memoria\_antenas@{libertar\_memoria\_antenas}}
+\index{libertar\_memoria\_antenas@{libertar\_memoria\_antenas}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{libertar\_memoria\_antenas()}{libertar\_memoria\_antenas()}}
+{\footnotesize\ttfamily \label{source_8c_a0eaba51dd30db393e925cf74125e20eb} 
+void libertar\+\_\+memoria\+\_\+antenas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structantenas}{antenas}}}]{lista}{}\end{DoxyParamCaption})}
+
+
+
+Função para libertar a memória alocada para a lista de antenas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em lista} & \\
+\hline
+\end{DoxyParams}
+Liberta a memória da lista de adjacentes
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00118\ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordflow}{while}\ (lista\ !=\ NULL)\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_af23ab64dda136e7a391d22c4fcbf4c18}{liberar\_memoria\_adjacentes}}(lista-\/>\mbox{\hyperlink{structantenas_ae0316f4aa9104d3dd079d2b4053688aa}{listaadjacentes}});\ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structantenas}{antenas}}\ temp\ =\ lista;}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ lista\ =\ lista-\/>\mbox{\hyperlink{structantenas_a2885be1d1224df60f8b3b6c540737718}{seguinte}};}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ free(temp);}
+\DoxyCodeLine{00124\ \ \ \ \ \}}
+\DoxyCodeLine{00125\ \}}
+
+\end{DoxyCode}
+\Hypertarget{source_8c_ac9172d1143439bde571a162196187420}\index{source.c@{source.c}!n\_colunas@{n\_colunas}}
+\index{n\_colunas@{n\_colunas}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{n\_colunas()}{n\_colunas()}}
+{\footnotesize\ttfamily \label{source_8c_ac9172d1143439bde571a162196187420} 
+int n\+\_\+colunas (\begin{DoxyParamCaption}\item[{char}]{ficheiro}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Função para contar o número de colunas no ficheiro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cidade} & Ponteiro para o ficheiro. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Número de colunas. 
+\end{DoxyReturn}
+Abre o ficheiro em modo binário
+
+Adiciona verificação EOF
+
+Verifica se o ficheiro está vazio
+
+Fecha o ficheiro
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00144\ \{}
+\DoxyCodeLine{00145\ \ \ \ \ FILE\ *cidade\ =\ fopen(ficheiro,\ \textcolor{stringliteral}{"{}rb"{}});\ }
+\DoxyCodeLine{00146\ \ \ \ \ }
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordflow}{if}\ (!cidade)}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{int}\ colunas\ =\ 0;}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{char}\ c;}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordflow}{while}\ ((c\ =\ fgetc(cidade))\ !=\ EOF\ \&\&\ c\ !=\ \textcolor{charliteral}{'\(\backslash\)n'})\ }
+\DoxyCodeLine{00153\ \ \ \ \ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ colunas++;}
+\DoxyCodeLine{00155\ \ \ \ \ \}}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordflow}{if}\ (c\ ==\ EOF\ \&\&\ colunas\ ==\ 0)\ }
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ fclose(cidade);\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordflow}{return}\ colunas;}
+\DoxyCodeLine{00161\ \}}
+
+\end{DoxyCode}
+\Hypertarget{source_8c_a3d1b49ed242259db3ac95528a735c7b2}\index{source.c@{source.c}!n\_linhas@{n\_linhas}}
+\index{n\_linhas@{n\_linhas}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{n\_linhas()}{n\_linhas()}}
+{\footnotesize\ttfamily \label{source_8c_a3d1b49ed242259db3ac95528a735c7b2} 
+int n\+\_\+linhas (\begin{DoxyParamCaption}\item[{char}]{ficheiro}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Função para contar o número de linhas no ficheiro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cidade} & Ponteiro para o ficheiro. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Número de linhas. 
+\end{DoxyReturn}
+Abre o ficheiro em modo binário
+
+Fecha o ficheiro
+
+Adiciona 1 para contar a última linha
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00169\ \{}
+\DoxyCodeLine{00170\ \ \ \ \ FILE\ *cidade\ =\ fopen(ficheiro,\ \textcolor{stringliteral}{"{}rb"{}});\ }
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordflow}{if}\ (!cidade)}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{int}\ linhas\ =\ 0;}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{char}\ c;}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordflow}{while}\ ((c\ =\ fgetc(cidade))\ !=\ EOF)}
+\DoxyCodeLine{00177\ \ \ \ \ \{}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (c\ ==\ \textcolor{charliteral}{'\(\backslash\)n'})}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ linhas++;}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00182\ \ \ \ \ \}}
+\DoxyCodeLine{00183\ \ \ \ \ fclose(cidade);\ }
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordflow}{return}\ (linhas\ +\ 1);\ }
+\DoxyCodeLine{00185\ \}}
+
+\end{DoxyCode}
+\Hypertarget{source_8c_afe2e0dc3ccd28ac7489a54bbc8db2206}\index{source.c@{source.c}!procuraLargura@{procuraLargura}}
+\index{procuraLargura@{procuraLargura}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{procuraLargura()}{procuraLargura()}}
+{\footnotesize\ttfamily \label{source_8c_afe2e0dc3ccd28ac7489a54bbc8db2206} 
+void procura\+Largura (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structantenas}{antenas}}}]{mapa}{, }\item[{int}]{vertice}{}\end{DoxyParamCaption})}
+
+
+
+Função para procurar em profundidade. através dos grafos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em mapa} & \\
+\hline
+{\em vertice} & \\
+\hline
+\end{DoxyParams}
+serve para inicializar o array caminho\mbox{[}\mbox{]} com um valor “inválido”, que sinaliza que essa posição ainda não foi ocupada.
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00381\ \ \ \ \ \mbox{\hyperlink{structantenas}{antenas}}\ aux\ =\ mapa;}
+\DoxyCodeLine{00382\ \ \ \ \ \textcolor{keywordtype}{int}\ qt;}
+\DoxyCodeLine{00383\ \ \ \ \ \textcolor{keywordtype}{int}\ opc\ =\ \mbox{\hyperlink{source_8c_a822f64e96afd0515fa1612e4ef112ba3}{contarantenas}}(mapa);}
+\DoxyCodeLine{00384\ \ \ \ \ \textcolor{keywordflow}{while}\ (aux\ !=\ NULL)\ \{}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (aux-\/>\mbox{\hyperlink{structantenas_a29481a7413ce6a78ab30caf74caf3eb9}{verticeantena}}\ ==\ vertice)\ \{}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structadjacentes}{adjacentes}}\ adj\ =\ aux-\/>\mbox{\hyperlink{structantenas_ae0316f4aa9104d3dd079d2b4053688aa}{listaadjacentes}};}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ \ \ \ \ qt\ =\ \mbox{\hyperlink{source_8c_abf84312f0a1500cfe85c130464da3ac4}{contaradj}}(adj);}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ caminho[qt];}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ visitados[qt];}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ qt;\ i++)\ \{}
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ visitados[i]\ =\ 0;}
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ caminho[i]\ =\ -\/1;\ }
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (adj\ ==\ NULL)\ \{}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}});}
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Antena\ n\ \%d\ não\ tem\ adjacentes.\(\backslash\)n"{}},\ aux-\/>\mbox{\hyperlink{structantenas_a29481a7413ce6a78ab30caf74caf3eb9}{verticeantena}});}
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_ad243f93c16bc4c1d3e0a13b84421d760}{CYAN}});}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Vai\ ser\ redirecionado\ para\ o\ menu\ principal...\(\backslash\)n"{}});}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Sleep(2000);}
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Do\ vertice\ \%d\ com\ frequencia:\ \%c\ é\ possível\ chegar\ a:\ [\ "{}},\ aux-\/>\mbox{\hyperlink{structantenas_a29481a7413ce6a78ab30caf74caf3eb9}{verticeantena}},\ aux-\/>\mbox{\hyperlink{structantenas_a0b5330bae99713f9c1bde6de095cd44c}{freq}});}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (adj\ !=\ NULL)\ \{}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}(\%d)\ "{}},\ adj-\/>\mbox{\hyperlink{structadjacentes_a4f4f45dc947ce3e1033c8e96fbebe82e}{verticeadjacente}});}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ adj\ =\ adj-\/>\mbox{\hyperlink{structadjacentes_a04a5719249e62ff934f6ea0b8ba0814d}{seguinte}};}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}]\(\backslash\)nInsira\ o\ proximo\ vertice\ (0\ para\ sair):\ "{}});}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ proximo;}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\ \%d"{}},\ \&proximo);}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (proximo\ ==\ 0)\ \{}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}});}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}A\ sair...\(\backslash\)n"{}});}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Sleep(2000);}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});}
+\DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00417\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (proximo\ >\ 0\ \&\&\ proximo\ <=\ opc)\ \mbox{\hyperlink{source_8c_afe2e0dc3ccd28ac7489a54bbc8db2206}{procuraLargura}}(mapa,\ proximo);}
+\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}});}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Antena\ não\ existe.\(\backslash\)n"{}});}
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});}
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ aux\ =\ aux-\/>\mbox{\hyperlink{structantenas_a2885be1d1224df60f8b3b6c540737718}{seguinte}};}
+\DoxyCodeLine{00426\ \ \ \ \ \}}
+\DoxyCodeLine{00427\ \}}
+
+\end{DoxyCode}
+\Hypertarget{source_8c_a3955e47d7c902d0e018eecc63675910d}\index{source.c@{source.c}!procuraProfundidade@{procuraProfundidade}}
+\index{procuraProfundidade@{procuraProfundidade}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{procuraProfundidade()}{procuraProfundidade()}}
+{\footnotesize\ttfamily \label{source_8c_a3955e47d7c902d0e018eecc63675910d} 
+void procura\+Profundidade (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structantenas}{antenas}}}]{mapa}{, }\item[{int}]{partida}{}\end{DoxyParamCaption})}
+
+
+
+Função para procurar em profundidade. 
+
+Esta função percorre o grafo em profundidade a partir de um vértice de partida. 
+\begin{DoxyParams}{Parâmetros}
+{\em mapa} & \\
+\hline
+{\em partida} & \\
+\hline
+\end{DoxyParams}
+serve para inicializar o array caminho\mbox{[}\mbox{]} com um valor “inválido”, que sinaliza que essa posição ainda não foi ocupada.
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00354\ \ \ \ \ \textcolor{keywordtype}{int}\ total\ =\ \mbox{\hyperlink{source_8c_a822f64e96afd0515fa1612e4ef112ba3}{contarantenas}}(mapa);}
+\DoxyCodeLine{00355\ \ \ \ \ \textcolor{keywordtype}{int}\ visitados[total\ +\ 1];}
+\DoxyCodeLine{00356\ \ \ \ \ \textcolor{keywordtype}{int}\ caminho[total\ +\ 1];}
+\DoxyCodeLine{00357\ \ \ \ \ }
+\DoxyCodeLine{00358\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ total;\ i++)\ \{}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ visitados[i]\ =\ 0;}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ caminho[i]\ =\ -\/1;\ }
+\DoxyCodeLine{00361\ \ \ \ \ \}}
+\DoxyCodeLine{00362\ }
+\DoxyCodeLine{00363\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n-\/-\/-\/\ Início\ da\ procura\ em\ profundidade\ a\ partir\ da\ antena\ \%d\ -\/-\/-\/\(\backslash\)n"{}},\ partida);}
+\DoxyCodeLine{00364\ \ \ \ \ \mbox{\hyperlink{structantenas}{antenas}}\ aux\ =\ mapa;}
+\DoxyCodeLine{00365\ \ \ \ \ \textcolor{keywordflow}{if}\ (aux-\/>\mbox{\hyperlink{structantenas_ae0316f4aa9104d3dd079d2b4053688aa}{listaadjacentes}}\ ==\ NULL)\{}
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}});}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Antena\ sem\ adjacentes.\(\backslash\)n"{}});}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00370\ \ \ \ \ \}}
+\DoxyCodeLine{00371\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Passou\ pela\ antena:\ \(\backslash\)n"{}});}
+\DoxyCodeLine{00372\ \ \ \ \ \mbox{\hyperlink{source_8c_a6b0352687dbedd2712945509a726fc38}{recursiva\_profundidade}}(mapa,\ partida,\ visitados,\ caminho,\ 0);}
+\DoxyCodeLine{00373\ \}}
+
+\end{DoxyCode}
+\Hypertarget{source_8c_a6b0352687dbedd2712945509a726fc38}\index{source.c@{source.c}!recursiva\_profundidade@{recursiva\_profundidade}}
+\index{recursiva\_profundidade@{recursiva\_profundidade}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{recursiva\_profundidade()}{recursiva\_profundidade()}}
+{\footnotesize\ttfamily \label{source_8c_a6b0352687dbedd2712945509a726fc38} 
+void recursiva\+\_\+profundidade (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structantenas}{antenas}}}]{mapa}{, }\item[{int}]{vertice}{, }\item[{int}]{visitados}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{caminho}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{nivel}{}\end{DoxyParamCaption})}
+
+
+
+Função recursiva para procurar em profundidade. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em mapa} & \\
+\hline
+{\em vertice} & \\
+\hline
+{\em visitados} & \\
+\hline
+{\em caminho} & \\
+\hline
+{\em nivel} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00323\ \ \ \ \ \mbox{\hyperlink{structantenas}{antenas}}\ aux\ =\ mapa;}
+\DoxyCodeLine{00324\ \ \ \ \ \textcolor{keywordflow}{while}\ (aux\ !=\ NULL)\ \{}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (aux-\/>\mbox{\hyperlink{structantenas_a29481a7413ce6a78ab30caf74caf3eb9}{verticeantena}}\ ==\ vertice)\ \{}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (visitados[vertice]\ ==\ 0)\ \{}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ visitados[vertice]\ =\ 1;}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ caminho[nivel]\ =\ vertice;}
+\DoxyCodeLine{00329\ }
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}-\/-\/>\ Freq:\ \%c\ n\ \%d\ (\%d,\ \%d)\ "{}},\ aux-\/>\mbox{\hyperlink{structantenas_a0b5330bae99713f9c1bde6de095cd44c}{freq}},\ aux-\/>\mbox{\hyperlink{structantenas_a29481a7413ce6a78ab30caf74caf3eb9}{verticeantena}},\ aux-\/>\mbox{\hyperlink{structantenas_af57080d098efc718dd0c6ad1d14de6a9}{coordenadas}}\ /\ 1000,\ aux-\/>\mbox{\hyperlink{structantenas_af57080d098efc718dd0c6ad1d14de6a9}{coordenadas}}\ \%\ 1000);}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ percorre\ os\ adjacentes}}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structadjacentes}{adjacentes}}\ adj\ =\ aux-\/>\mbox{\hyperlink{structantenas_ae0316f4aa9104d3dd079d2b4053688aa}{listaadjacentes}};}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (adj\ !=\ NULL)\ \{}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!visitados[adj-\/>\mbox{\hyperlink{structadjacentes_a4f4f45dc947ce3e1033c8e96fbebe82e}{verticeadjacente}}])\ \{}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_a6b0352687dbedd2712945509a726fc38}{recursiva\_profundidade}}(mapa,\ adj-\/>\mbox{\hyperlink{structadjacentes_a4f4f45dc947ce3e1033c8e96fbebe82e}{verticeadjacente}},\ visitados,\ caminho,\ ++nivel);}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ adj\ =\ adj-\/>\mbox{\hyperlink{structadjacentes_a04a5719249e62ff934f6ea0b8ba0814d}{seguinte}};}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ aux\ =\ aux-\/>\mbox{\hyperlink{structantenas_a2885be1d1224df60f8b3b6c540737718}{seguinte}};}
+\DoxyCodeLine{00343\ \ \ \ \ \}}
+\DoxyCodeLine{00344\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00345\ \}}
+
+\end{DoxyCode}
+\Hypertarget{source_8c_a2d52929d60841cd1296a081699671bf0}\index{source.c@{source.c}!sistema@{sistema}}
+\index{sistema@{sistema}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{sistema()}{sistema()}}
+{\footnotesize\ttfamily \label{source_8c_a2d52929d60841cd1296a081699671bf0} 
+int sistema (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Função principal do sistema. 
+
+\begin{DoxyReturn}{Retorna}
+0 se o programa terminar com sucesso. 
+\end{DoxyReturn}
+Inicializa a lista de antenas como vazia
+
+Inicializa a lista de adjacentes como vazia
+
+Inicializa o grafo como vazio
+
+Lê o ficheiro e armazena os dados na lista de antenas
+
+Adiciona os adjacentes à lista de antenas
+
+Liberta a memória da lista de adjacentes
+
+Liberta a memória da lista de antenas
+
+Limpa o nome do ficheiro
+
+Enquanto o utilizador não escolher sair do menu
+
+Enquanto o utilizador não escolher sair do programa
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00567\ \{}
+\DoxyCodeLine{00568\ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a6f699060902f800f12aaae150f3a708e}{MAGENTA}});}
+\DoxyCodeLine{00569\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t***Sistema\ de\ Antenas***\(\backslash\)n\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)tBEM-\/VINDO!\(\backslash\)n"{}});}
+\DoxyCodeLine{00570\ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});}
+\DoxyCodeLine{00571\ \ \ \ \ \textcolor{keywordtype}{char}\ nome\_ficheiro1[\mbox{\hyperlink{source_8c_ae0b4816fb45161ef9da5e6d6134ee28a}{TAM}}];}
+\DoxyCodeLine{00572\ \ \ \ \ \textcolor{keywordflow}{do}}
+\DoxyCodeLine{00573\ \ \ \ \ \{}
+\DoxyCodeLine{00574\ \ \ \ \ }
+\DoxyCodeLine{00575\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structantenas}{antenas}}\ mapaantenas\ =\ NULL;\ }
+\DoxyCodeLine{00576\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structadjacentes}{adjacentes}}\ listaadjacentes\ =\ NULL;\ }
+\DoxyCodeLine{00577\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structadjacentes}{adjacentes}}\ grafo\ =\ NULL;\ }
+\DoxyCodeLine{00578\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Insira\ o\ nome\ do\ ficheiro\ com\ a\ extensão\ ou\ \(\backslash\)"{}sair\(\backslash\)"{}\ para\ encerrar\ o\ programa:\ "{}});}
+\DoxyCodeLine{00579\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\ \%s"{}},\ nome\_ficheiro1);}
+\DoxyCodeLine{00580\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (strcmp(nome\_ficheiro1,\ \textcolor{stringliteral}{"{}sair"{}})\ ==\ 0)\ \{}
+\DoxyCodeLine{00581\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}});}
+\DoxyCodeLine{00582\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Volte\ sempre\ :D.\(\backslash\)n"{}});}
+\DoxyCodeLine{00583\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});}
+\DoxyCodeLine{00584\ \ \ \ \ \ \ \ \ \ \ \ \ Sleep(2000);}
+\DoxyCodeLine{00585\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00586\ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{00587\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{source_8c_ac9172d1143439bde571a162196187420}{n\_colunas}}(nome\_ficheiro1)\ ==\ 0\ \&\&\ \mbox{\hyperlink{source_8c_a3d1b49ed242259db3ac95528a735c7b2}{n\_linhas}}(nome\_ficheiro1)\ ==\ 0)}
+\DoxyCodeLine{00588\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00589\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}});}
+\DoxyCodeLine{00590\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Erro:\ ficheiro\ vazio,\ inexistente\ ou\ formato\ inválido.\(\backslash\)n"{}});}
+\DoxyCodeLine{00591\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});}
+\DoxyCodeLine{00592\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00593\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00594\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00595\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00596\ }
+\DoxyCodeLine{00597\ \ \ \ \ \ \ \ \ \ \ \ \ mapaantenas\ =\ \mbox{\hyperlink{source_8c_ae2ae1852d90e69af795f090960276cae}{ler\_ficheiro}}(nome\_ficheiro1,\ mapaantenas);\ }
+\DoxyCodeLine{00598\ \ \ \ \ \ \ \ \ \ \ \ \ mapaantenas\ =\ \mbox{\hyperlink{source_8c_ad1fc2915b1249a8662e621a43cb62016}{adicionarAdjacentes}}(mapaantenas);\ }
+\DoxyCodeLine{00599\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ tamanho\ =\ \mbox{\hyperlink{source_8c_a3d1b49ed242259db3ac95528a735c7b2}{n\_linhas}}(nome\_ficheiro1)\ *\ 1000\ +\ \mbox{\hyperlink{source_8c_ac9172d1143439bde571a162196187420}{n\_colunas}}(nome\_ficheiro1);\ }
+\DoxyCodeLine{00600\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ opc;}
+\DoxyCodeLine{00601\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}}
+\DoxyCodeLine{00602\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00603\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}});}
+\DoxyCodeLine{00604\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t***Menu\ principal***\(\backslash\)n"{}});}
+\DoxyCodeLine{00605\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a6f699060902f800f12aaae150f3a708e}{MAGENTA}});}
+\DoxyCodeLine{00606\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}1-\/-\/>\ Ver\ mapa\ de\ antenas.\(\backslash\)n"{}});}
+\DoxyCodeLine{00607\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}2-\/-\/>\ Procura\ em\ profundidade.\(\backslash\)n"{}});}
+\DoxyCodeLine{00608\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}3-\/-\/>\ Procura\ em\ largura.\(\backslash\)n"{}});}
+\DoxyCodeLine{00609\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}4-\/-\/>\ Traçar\ um\ caminho.\(\backslash\)n"{}});}
+\DoxyCodeLine{00610\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}5-\/-\/>\ Ver\ adjacentes.\(\backslash\)n"{}});}
+\DoxyCodeLine{00611\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}6-\/-\/>\ Ver\ pares\ que\ se\ intersetam.\(\backslash\)n"{}});}
+\DoxyCodeLine{00612\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}0-\/-\/>\ Escolher\ outro\ ficheiro!\(\backslash\)n"{}});}
+\DoxyCodeLine{00613\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});}
+\DoxyCodeLine{00614\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Escolha\ uma\ opção:\ "{}});}
+\DoxyCodeLine{00615\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\ \%d"{}},\ \&opc);}
+\DoxyCodeLine{00616\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (opc)\{}
+\DoxyCodeLine{00617\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{00618\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_a18c8218927ce641705cedebfaca181e4}{impressao\_mapa\_das\_antenas}}(mapaantenas);}
+\DoxyCodeLine{00619\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00620\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{00621\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ partida;}
+\DoxyCodeLine{00622\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Insira\ o\ número\ da\ antena\ de\ partida:\ "{}});}
+\DoxyCodeLine{00623\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\ \%d"{}},\ \&partida);}
+\DoxyCodeLine{00624\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (partida\ <\ \mbox{\hyperlink{source_8c_a822f64e96afd0515fa1612e4ef112ba3}{contarantenas}}(mapaantenas)\ \&\&\ partida\ >=\ 1)\ \{}
+\DoxyCodeLine{00625\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_a3955e47d7c902d0e018eecc63675910d}{procuraProfundidade}}(mapaantenas,\ partida);}
+\DoxyCodeLine{00626\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00627\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00628\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}});}
+\DoxyCodeLine{00629\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Antena\ não\ existe.\(\backslash\)n"{}});}
+\DoxyCodeLine{00630\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});}
+\DoxyCodeLine{00631\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00632\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00633\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{00634\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ parti;}
+\DoxyCodeLine{00635\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Insira\ o\ número\ da\ antena\ de\ partida:\ "{}});}
+\DoxyCodeLine{00636\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\ \%d"{}},\ \&parti);}
+\DoxyCodeLine{00637\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (parti\ <\ \mbox{\hyperlink{source_8c_a822f64e96afd0515fa1612e4ef112ba3}{contarantenas}}(mapaantenas)\ \&\&\ parti\ >=\ 1)\ }
+\DoxyCodeLine{00638\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_afe2e0dc3ccd28ac7489a54bbc8db2206}{procuraLargura}}(mapaantenas,\ parti);}
+\DoxyCodeLine{00639\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00640\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}});}
+\DoxyCodeLine{00641\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Antena\ não\ existe.\(\backslash\)n"{}});}
+\DoxyCodeLine{00642\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});}
+\DoxyCodeLine{00643\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00644\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00645\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:}
+\DoxyCodeLine{00646\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ int\ a,\ b;}}
+\DoxyCodeLine{00647\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ printf("{}Insira\ o\ número\ da\ antena\ de\ partida:\ "{});}}
+\DoxyCodeLine{00648\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ scanf("{}\%d"{},\ \&a);}}
+\DoxyCodeLine{00649\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ printf("{}Insira\ o\ número\ da\ antena\ de\ chegada:\ "{});}}
+\DoxyCodeLine{00650\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ scanf("{}\%d"{},\ \&b);}}
+\DoxyCodeLine{00651\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ caminho\_apb(mapaantenas,\ \&grafo,\ \&a,\ a,\ b,\ NULL,\ 0);}}
+\DoxyCodeLine{00652\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ break;}}
+\DoxyCodeLine{00653\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Função\ ainda\ não\ implementada.\(\backslash\)n"{}});}
+\DoxyCodeLine{00654\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 5:\ }
+\DoxyCodeLine{00655\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_a32933396b1d9275bbab356b91fdaf381}{imprimirAdjacentes}}(mapaantenas);}
+\DoxyCodeLine{00656\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00657\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 6:}
+\DoxyCodeLine{00658\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_a75b49b961c1106519a649c5c6959b651}{intersecao}}(mapaantenas,\ tamanho);}
+\DoxyCodeLine{00659\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};\ }
+\DoxyCodeLine{00660\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 0:}
+\DoxyCodeLine{00661\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a79d10e672abb49ad63eeaa8aaef57c38}{BLUE}});}
+\DoxyCodeLine{00662\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_af23ab64dda136e7a391d22c4fcbf4c18}{liberar\_memoria\_adjacentes}}(listaadjacentes);\ }
+\DoxyCodeLine{00663\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_a0eaba51dd30db393e925cf74125e20eb}{libertar\_memoria\_antenas}}(mapaantenas);\ }
+\DoxyCodeLine{00664\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nome\_ficheiro1[0]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};\ }
+\DoxyCodeLine{00665\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Aguarde...\(\backslash\)n"{}});}
+\DoxyCodeLine{00666\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}A\ ser\ redirecionado\ para\ o\ início...\(\backslash\)n"{}});}
+\DoxyCodeLine{00667\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});}
+\DoxyCodeLine{00668\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Sleep(1000);}
+\DoxyCodeLine{00669\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00670\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00671\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}});}
+\DoxyCodeLine{00672\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Opção\ inválida.\ Tente\ novamente.\(\backslash\)n"{}});}
+\DoxyCodeLine{00673\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{source_8c_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});}
+\DoxyCodeLine{00674\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00675\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00676\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (opc\ !=\ 0);\ \ }
+\DoxyCodeLine{00677\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00678\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (strcmp(nome\_ficheiro1,\ \textcolor{stringliteral}{"{}sair"{}})!=0);\ }
+\DoxyCodeLine{00679\ }
+\DoxyCodeLine{00680\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00681\ }
+\DoxyCodeLine{00682\ \}}
+
+\end{DoxyCode}

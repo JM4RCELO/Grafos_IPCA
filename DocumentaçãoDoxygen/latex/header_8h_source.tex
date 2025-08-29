@@ -1,0 +1,60 @@
+\doxysection{header.\+h}
+\hypertarget{header_8h_source}{}\label{header_8h_source}\index{C:/Users/joaom/Documents/IPCA/MaterialCurso/2o\_Semestre/Estruturas\_Dados\_Avancados/TEDA\_31067\_Grafos/header.h@{C:/Users/joaom/Documents/IPCA/MaterialCurso/2o\_Semestre/Estruturas\_Dados\_Avancados/TEDA\_31067\_Grafos/header.h}}
+\mbox{\hyperlink{header_8h}{Ir para a documentação deste ficheiro.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HEADER\_H\ }\textcolor{comment}{//\ PROTEÇÃO\ PARA\ NÃO\ INCLUIR\ O\ HEADER\ MAIS\ QUE\ UMA\ VEZ}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HEADER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <windows.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <ctype.h>}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//DEFINIÇÃO\ DO\ CÓDIGO\ DA\ COR}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ RED\ \ \ \ \ 12}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ GREEN\ \ \ 10}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ YELLOW\ \ 14}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ BLUE\ \ \ \ 9}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ MAGENTA\ 13}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ CYAN\ \ \ \ 11}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ WHITE\ \ \ 15}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structadjacentes}{adjacentes}}}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structadjacentes_a4f4f45dc947ce3e1033c8e96fbebe82e}{verticeadjacente}};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structadjacentes}{adjacentes}}*\ \mbox{\hyperlink{structadjacentes_a04a5719249e62ff934f6ea0b8ba0814d}{seguinte}};}
+\DoxyCodeLine{00021\ \}\ *\mbox{\hyperlink{structadjacentes}{adjacentes}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structantenas}{antenas}}}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structantenas_a0b5330bae99713f9c1bde6de095cd44c}{freq}};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structantenas_af57080d098efc718dd0c6ad1d14de6a9}{coordenadas}};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structantenas}{antenas}}*\ \mbox{\hyperlink{structantenas_a2885be1d1224df60f8b3b6c540737718}{seguinte}};}
+\DoxyCodeLine{00028\ \}\ *\ \mbox{\hyperlink{structantenas}{antenas}};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{header_8h_ac4fb83ae43de017f114ff5f8152e4bd9}{corletra}}(\textcolor{keywordtype}{int}\ cor);}
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{header_8h_a822f64e96afd0515fa1612e4ef112ba3}{contarantenas}}(\mbox{\hyperlink{structantenas}{antenas}}\ lista);}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{header_8h_abf84312f0a1500cfe85c130464da3ac4}{contaradj}}(\mbox{\hyperlink{structadjacentes}{adjacentes}}\ lista);}
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{header_8h_af23ab64dda136e7a391d22c4fcbf4c18}{liberar\_memoria\_adjacentes}}(\mbox{\hyperlink{structadjacentes}{adjacentes}}\ lista);}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{header_8h_a0eaba51dd30db393e925cf74125e20eb}{libertar\_memoria\_antenas}}(\mbox{\hyperlink{structantenas}{antenas}}\ lista);}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{header_8h_ac9172d1143439bde571a162196187420}{n\_colunas}}(\textcolor{keywordtype}{char}\ ficheiro[]);}
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{header_8h_a3d1b49ed242259db3ac95528a735c7b2}{n\_linhas}}(\textcolor{keywordtype}{char}\ ficheiro[]);}
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{header_8h_ae12365535299a0c0240b3e3c06b08a5e}{contarRegistos}}(\mbox{\hyperlink{structantenas}{antenas}}\ lista);}
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{header_8h_a9f4f6a17e3efab3411e44bc01cf83334}{impressao\_dados\_antenas}}(\mbox{\hyperlink{structantenas}{antenas}}\ mapa);}
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{header_8h_a4fdc8306eaca0191b3e6a299a6bc991a}{impressao\_mapa\_das\_antenas}}(\mbox{\hyperlink{structantenas}{antenas}}\ mapa,\ \textcolor{keywordtype}{char}\ ficheiro[]);}
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{header_8h_a6b0352687dbedd2712945509a726fc38}{recursiva\_profundidade}}(\mbox{\hyperlink{structantenas}{antenas}}\ mapa,\ \textcolor{keywordtype}{int}\ vertice,\ \textcolor{keywordtype}{int}\ visitados[],\ \textcolor{keywordtype}{int}\ caminho[],\ \textcolor{keywordtype}{int}\ nivel);}
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{header_8h_a3955e47d7c902d0e018eecc63675910d}{procuraProfundidade}}(\mbox{\hyperlink{structantenas}{antenas}}\ mapa,\ \textcolor{keywordtype}{int}\ partida);}
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{header_8h_afe2e0dc3ccd28ac7489a54bbc8db2206}{procuraLargura}}(\mbox{\hyperlink{structantenas}{antenas}}\ mapa,\ \textcolor{keywordtype}{int}\ vertice);}
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{header_8h_a32933396b1d9275bbab356b91fdaf381}{imprimirAdjacentes}}(\mbox{\hyperlink{structantenas}{antenas}}\ mapa);}
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{header_8h_a75b49b961c1106519a649c5c6959b651}{intersecao}}(\mbox{\hyperlink{structantenas}{antenas}}\ mapa,\ \textcolor{keywordtype}{int}\ tamanho);}
+\DoxyCodeLine{00046\ \mbox{\hyperlink{structantenas}{antenas}}\ \mbox{\hyperlink{header_8h_ad1fc2915b1249a8662e621a43cb62016}{adicionarAdjacentes}}(\mbox{\hyperlink{structantenas}{antenas}}\ mapa);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{header_8h_a2d52929d60841cd1296a081699671bf0}{sistema}}();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \mbox{\hyperlink{structantenas}{antenas}}\ \mbox{\hyperlink{header_8h_a8932eb05173794b6fb2f4f5ac587404c}{ler\_ficheiro}}(FILE\ *cidade,\ \mbox{\hyperlink{structantenas}{antenas}}\ mapa);}
+\DoxyCodeLine{00051\ \mbox{\hyperlink{structantenas}{antenas}}\ \mbox{\hyperlink{header_8h_adbc630f567c9ac69c28c6f2da5dd61d8}{inserir\_antena}}(\mbox{\hyperlink{structantenas}{antenas}}\ mapa);}
+\DoxyCodeLine{00052\ \mbox{\hyperlink{structantenas}{antenas}}\ \mbox{\hyperlink{header_8h_aa7c9de1775029c288896555271bf1ce1}{remover\_antena}}(\mbox{\hyperlink{structantenas}{antenas}}\ mapa);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ HEADER\_H}}
+
+\end{DoxyCode}
